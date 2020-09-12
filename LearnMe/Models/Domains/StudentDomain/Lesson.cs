@@ -8,6 +8,10 @@ namespace LearnMe.Models.Domains.StudentDomain
 {
     public class Lesson : BaseEntity
     {
+        public int CalendarEventId { get; set; }
+
+        public int ToUserId { get; set; }
+        
         [Required(ErrorMessage = "This field is required")]
         public CalendarEvent CalendarEvent { get; set; }
 
@@ -18,7 +22,6 @@ namespace LearnMe.Models.Domains.StudentDomain
 
         [Required(ErrorMessage = "This field is required")]
         public string MessageText { get; set; }
-
 
         public IList<string> HomeworkFiles { get; set; }
         
